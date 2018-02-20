@@ -1,0 +1,57 @@
+ques 16:
+
+
+package treesetex;
+import java.util.*;
+
+public class TreeSetEx {
+
+    
+    public static void main(String[] args) {
+        Set<Employee> set = new TreeSet<Employee>();
+        Employee e1 = new Employee("Krish", 1, 27);
+        Employee e2 = new Employee("Thayu", 2, 24);
+        Employee e3 = new Employee("Raja", 3, 26);
+        Employee e4 = new Employee("Ram", 7, 25);
+        Employee e5 = new Employee("Ravi", 5, 23);
+        Employee e6 = new Employee("Ramesh", 6, 22);
+        Employee e7 = new Employee("Aravind", 4, 21);
+        set.add(e1);
+        set.add(e2);
+        set.add(e3);
+        set.add(e4);
+        set.add(e5);
+        set.add(e6);
+        set.add(e7);
+        for(Employee e: set)
+        {
+            System.out.println(e.id + " " + e.name + " " + e.age);
+        }
+    }
+    
+    
+}
+class Employee implements Comparable<Employee>
+{
+    int id, age;
+    String name;
+    public Employee(String name,int id, int age)
+    {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
+    public int compareTo(Employee e)
+    {
+        if(id > e.id)
+        {
+            return 1;
+        }
+        else if(id < e.id)
+        {
+            return -1;
+        }
+        else
+            return 0;
+    }
+}

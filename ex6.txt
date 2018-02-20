@@ -1,0 +1,20 @@
+ques 6:
+
+
+package ex6;
+import java.util.*;
+public class Ex6 {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the number you like to reverse");
+       int num = sc.nextInt();
+       String numb = Integer.toString(num);
+       char nums[] = numb.toCharArray();
+       for(int i = nums.length-1; i>=0; i--)
+       {
+           System.out.print(nums[i]);
+       }
+    }
+    
+}

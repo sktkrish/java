@@ -1,0 +1,44 @@
+ques 8:
+
+
+package ex8;
+import java.util.*;
+
+public class Ex8 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name[] = new String[5];
+        int sal[] = new int[5];
+        int max = sal[0];
+        int min = sal[0];
+        int maxim = 0;
+        int minim = 0;
+        int avg = 0;
+        double average = 0;
+        for(int i =0; i<5; i++)
+        {
+            System.out.println("Enter the name of the employee");
+            name[i]= sc.next();
+            System.out.println("Enter the salary of that employee");
+            sal[i] = sc.nextInt();
+            avg = avg + sal[i];
+            if(max < sal[i])
+            {
+                max = sal[i];
+                maxim = i;
+            }
+            if(min > sal[i])
+            {
+                min = sal[i];
+                minim = i;
+            }
+        }
+        average = (double)avg/5;
+        System.out.println("Highly paid Employee is " + name[maxim] + " with salary " + sal[maxim]);
+        System.out.println("Lowly paid Employee is " + name[minim] + " with salary " + sal[minim]);
+        System.out.println("The average salary of employee is " + average);
+    }
+    
+}

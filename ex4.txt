@@ -1,0 +1,28 @@
+ques 4:
+
+
+package ex4;
+
+import java.util.*;
+
+
+public class Ex4 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num[] = new int[10];
+        int sum = 0;
+        
+        for(int i =0; i< 10; i++)
+        {
+            System.out.println("Enter number");
+            num[i] = sc.nextInt();
+            sum = sum + num[i];
+        }
+        double avg = (sum/10);
+        System.out.println("the sum of 10 numbers is " + sum);
+        System.out.println("The average of 10 numbers is " + avg);
+    }
+    
+}

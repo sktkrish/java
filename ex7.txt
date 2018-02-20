@@ -1,0 +1,87 @@
+ques 7:
+
+
+package ex7;
+import java.util.*;
+
+public class Ex7 {
+     int a,b;
+    public void numb()
+    {
+        Scanner sb = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        a = sb.nextInt();
+        System.out.println("Enter the second number");
+        b = sb.nextInt();
+    }
+    public void Input()
+    {
+        Ex7 obj = new Ex7();
+        int res;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number from the following menu options in number");
+        System.out.println("1.Addition");
+        System.out.println("2.Subtraction");
+        System.out.println("3.Multiplication");
+        System.out.println("4.Division");
+        System.out.println("5.Percentage");
+        System.out.println("6.Exit");
+        int num = sc.nextInt();
+        switch(num)
+        {
+            case 1:
+            {
+               obj.numb();
+               res = obj.a + obj.b;
+               System.out.println("Addition result is " + res);
+               break;
+            }
+            case 2:
+            {
+               obj.numb();
+               res = obj.a - obj.b;
+               System.out.println("Subtraction result is " + res);
+               break;
+            }
+            case 3:
+            {
+               obj.numb();
+               res = obj.a * obj.b;
+               System.out.println("Multiplication result is " + res);
+               break;
+            }
+            case 4:
+            {
+               obj.numb();
+               double div = (double)obj.a / obj.b;
+               System.out.println("Division result is " + div);
+               break;
+            }
+            case 5:
+            {
+               obj.numb();
+               double div = (double)obj.a/obj.b;
+               double perc = div*100;
+               System.out.println("Percentage result is " + perc);
+               break;
+            }
+            case 6:
+            {
+                System.exit(0);
+                break;
+            }
+            default:
+            {
+                System.out.println("Enter the valid options in menu from 1 to 6");
+                obj.Input();
+            }
+        }
+        obj.Input();
+    }
+    public static void main(String[] args) {
+         Ex7 ob1 = new Ex7();
+         ob1.Input();
+        
+    }
+    
+}

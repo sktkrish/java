@@ -1,0 +1,63 @@
+ques 10:
+
+
+package ex10;
+
+import java.util.Scanner;
+
+
+public class Ex10 {
+
+    
+    public static void main(String[] args) {
+        int col;
+        int row;
+        int matrix[][] = new int[3][3];
+        int matrix1[][] = new int[3][3];
+        int matrix2[][] = new int[3][3];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column");
+                matrix[i][j] = sc.nextInt();
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column for the second matrix");
+                matrix1[i][j] = sc.nextInt();
+                matrix2[i][j] = matrix[i][j] + matrix1[i][j];
+                //System.out.println(matrix2[i][j]);
+            }
+        }
+        System.out.println("1st matrix");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("2nd matrix");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix1[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("added matrix is");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix2[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    
+}

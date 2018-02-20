@@ -1,0 +1,55 @@
+ques 14:
+
+
+package genericex;
+import java.util.*;
+
+
+public class GenericEx {
+
+    
+    public static void main(String[] args) {
+        
+        int n =0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enetr the number of details you like to enter in numbers");
+        n= sc.nextInt();
+        int age[] = new int[n];
+        int sal[] = new int[n];
+        
+        for(int i = 0; i<n; i++)
+        {
+            int x = i + 1;
+            System.out.println("Eneter the age of employee " + x);
+            age[i] = sc.nextInt();
+            System.out.println("Eneter the salary of employee " + x);
+            sal[i] = sc.nextInt();
+            
+        }
+        
+        for(int i = 0; i<n; i++)
+        {
+          EmpDet<Integer, Integer> ed = new EmpDet<Integer, Integer>(age[i], sal[i]);
+          int t = i + 1;
+          System.out.println("detail of the employee " + t  + " : ") ;
+          ed.printDet(age[i], sal[i]);    
+        }
+        
+    }
+    
+}
+class EmpDet<A, S>
+{
+    A a;
+    S s;
+    public EmpDet(A a, S s)
+    {
+        this.a = a;
+        this.s = s;
+    }
+    void printDet(int age, int sal)
+    {
+        System.out.println("The age is " + a);
+        System.out.println("The Salary is " + s);
+    }
+}

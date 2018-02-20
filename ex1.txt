@@ -1,0 +1,28 @@
+ques 1:
+package stuex1;
+import java.util.*;
+
+public class StuEx1 {
+
+   
+    public static void main(String[] args) {
+        String name[] = new String[10];
+        int age[] = new int[10];
+        int count = 0;
+        Scanner sc = new Scanner(System.in);
+        
+        for(int i = 0; i< 10; i++)
+        {
+            System.out.println("Enter the student name");
+            name[i] = sc.next();
+            System.out.println("Enter th student age");
+            age[i] = sc.nextInt();
+            if(age[i] > 18)
+            {
+                count = count + 1;
+            }
+        }
+        System.out.println("Total count of student who are eligible to join are : " + count);
+    }
+    
+}

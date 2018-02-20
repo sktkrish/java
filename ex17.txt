@@ -1,0 +1,207 @@
+ques 17:
+
+package ex17;
+import java.util.*;
+
+public class Ex17 {
+
+   
+    public static void main(String[] args) {
+        System.out.println("Details of students in maths department");
+        maths obj = new maths();
+        
+       obj.display();
+       System.out.println("Details of students in biology department");
+        Biology obj1 = new Biology();
+        obj1.display();
+        System.out.println("Details of students in computer department");
+        Computer obj2 = new Computer();
+        obj2.display();
+        System.out.println("Details of students in electronics department");
+        Electronics obj3 = new Electronics();
+        obj3.display();
+        System.out.println("Details of students in software department");
+        Software obj4 = new Software();
+        System.out.println("Details of students in hardware department");
+        Hardware obj5 = new Hardware();
+        System.out.println("Details of students in botony department");
+        Botony obj6 = new Botony();
+        System.out.println("Details of students in zoology department");
+        Zoology obj7 = new Zoology();
+    }
+    
+}
+class Science
+{
+    int numb;
+    String name[];
+    int age[];
+    void studentDet()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Number of students enroled");
+        numb = sc.nextInt();
+        name = new String[numb];
+        age = new int[numb];
+        for(int i =0; i< numb; i++)
+        {
+        System.out.println("Enter the name of the student");
+        name[i] = sc.next();
+        System.out.println("Enter the age of the student");
+        age[i] = sc.nextInt();
+        
+        }
+    }
+}
+class maths extends Science
+{
+    int marks[];
+    
+    maths()
+    {
+        
+        
+        super.studentDet();
+        
+       
+        
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in maths by " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+}
+class Biology extends Science
+{
+    int marks[];
+    Biology()
+    {
+        super.studentDet();
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in Biology by " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+    
+}
+class Computer extends Science
+{
+    int marks[];
+    Computer()
+    {
+        super.studentDet();
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in computer " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+}
+class Electronics extends Science
+{
+    int marks[];
+    Electronics()
+    {
+        super.studentDet();
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in electronics by " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+}
+class Software extends Computer
+{
+    
+    Software()
+    {
+        
+        
+        super.display();
+    }
+   
+}
+class Hardware extends Computer
+{
+    
+    Hardware()
+    {
+        
+        
+        super.display();
+    }
+}
+class Botony extends Biology
+{
+    
+    Botony()
+    {
+        
+        
+        super.display();
+    }
+}
+class Zoology extends Biology
+{
+    
+    Zoology()
+    {
+        
+        
+        super.display();
+    }
+}
