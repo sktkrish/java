@@ -1,0 +1,1072 @@
+ques 1:
+package stuex1;
+import java.util.*;
+
+public class StuEx1 {
+
+   
+    public static void main(String[] args) {
+        String name[] = new String[10];
+        int age[] = new int[10];
+        int count = 0;
+        Scanner sc = new Scanner(System.in);
+        
+        for(int i = 0; i< 10; i++)
+        {
+            System.out.println("Enter the student name");
+            name[i] = sc.next();
+            System.out.println("Enter th student age");
+            age[i] = sc.nextInt();
+            if(age[i] > 18)
+            {
+                count = count + 1;
+            }
+        }
+        System.out.println("Total count of student who are eligible to join are : " + count);
+    }
+    
+}
+
+ques 2:
+
+
+package ex2;
+import java.util.*;
+
+public class Ex2 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name[] = new String[10];
+        int sal[] = new int[10];
+        double bonus = 0;
+        double range = 0;
+        for(int i = 0; i<10; i++)
+        {
+            System.out.println("Enter the name of employee");
+            name[i] = sc.next();
+            System.out.println("Enter the salary of employee");
+            sal[i] = sc.nextInt();
+            
+        }
+        for(int i = 0; i<10; i++)
+        {
+            if(sal[i] >= 10000 && sal[i] < 50000)
+            {
+                range = sal[i]*1.3; 
+                System.out.println("salary with bonus of the employee " + name[i] + "is " + range);
+                bonus = bonus + (sal[i]*0.3);
+            }
+            if(sal[i] >= 50000 && sal[i] < 100000)
+            {
+                 range = sal[i]*1.2;
+                 System.out.println("salary with bonus of the employee " + name[i] + "is " + range);
+                 bonus = bonus + (sal[i]*0.2);
+            }
+            if(sal[i] >= 100000)
+            {
+                range = sal[i]*1.1;
+                System.out.println("salary with bonus of the employee " + name[i] + "is " + range);
+                bonus = bonus + (sal[i]*0.10);
+            }
+        }
+        
+        System.out.println("the total bonus for all the employees is " + bonus);
+    }
+    
+}
+
+ques 3:
+
+package ex3;
+
+import java.util.*;
+public class Ex3 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num[] = new int[10];
+        int temp = 0;
+        for(int i =0; i< 10; i++)
+        {
+            System.out.println("Enter number");
+            num[i] = sc.nextInt();
+        }
+        Arrays.sort(num);
+        for(int i = 0; i< 10; i++)
+        {
+            System.out.println(num[i]);
+        }
+}
+}
+
+ques 4:
+
+
+package ex4;
+
+import java.util.*;
+
+
+public class Ex4 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num[] = new int[10];
+        int sum = 0;
+        
+        for(int i =0; i< 10; i++)
+        {
+            System.out.println("Enter number");
+            num[i] = sc.nextInt();
+            sum = sum + num[i];
+        }
+        double avg = (sum/10);
+        System.out.println("the sum of 10 numbers is " + sum);
+        System.out.println("The average of 10 numbers is " + avg);
+    }
+    
+}
+
+ques 5:
+
+
+package ex5;
+
+import java.util.*;
+public class Ex5 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name[] = new String[10];
+        int mark[] = new int[10];
+        int count;
+        for(int i = 0; i< 10; i++)
+        {
+            System.out.println("Enter the name of the student");
+            name[i] = sc.next();
+            System.out.println("Enter the marks scored by that student");
+            mark[i] = sc.nextInt();
+        }
+        for(int i =0; i< 10; i++)
+        {
+            count = 10;
+            for(int j = i+1; j<10; j++)
+            {
+                if(mark[i] < mark[j])
+                {
+                    count = 0;
+                    break;
+                }
+            }
+            if(count!=0)
+            {
+                System.out.println("Highest scorer is " + name[i] + " his mark is " + mark[i]);
+                break;
+            }
+        }
+    }
+    
+}
+
+ques 6:
+
+
+package ex6;
+import java.util.*;
+public class Ex6 {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the number you like to reverse");
+       int num = sc.nextInt();
+       String numb = Integer.toString(num);
+       char nums[] = numb.toCharArray();
+       for(int i = nums.length-1; i>=0; i--)
+       {
+           System.out.print(nums[i]);
+       }
+    }
+    
+}
+
+ques 7:
+
+
+package ex7;
+import java.util.*;
+
+public class Ex7 {
+     int a,b;
+    public void numb()
+    {
+        Scanner sb = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        a = sb.nextInt();
+        System.out.println("Enter the second number");
+        b = sb.nextInt();
+    }
+    public void Input()
+    {
+        Ex7 obj = new Ex7();
+        int res;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number from the following menu options in number");
+        System.out.println("1.Addition");
+        System.out.println("2.Subtraction");
+        System.out.println("3.Multiplication");
+        System.out.println("4.Division");
+        System.out.println("5.Percentage");
+        System.out.println("6.Exit");
+        int num = sc.nextInt();
+        switch(num)
+        {
+            case 1:
+            {
+               obj.numb();
+               res = obj.a + obj.b;
+               System.out.println("Addition result is " + res);
+               break;
+            }
+            case 2:
+            {
+               obj.numb();
+               res = obj.a - obj.b;
+               System.out.println("Subtraction result is " + res);
+               break;
+            }
+            case 3:
+            {
+               obj.numb();
+               res = obj.a * obj.b;
+               System.out.println("Multiplication result is " + res);
+               break;
+            }
+            case 4:
+            {
+               obj.numb();
+               double div = (double)obj.a / obj.b;
+               System.out.println("Division result is " + div);
+               break;
+            }
+            case 5:
+            {
+               obj.numb();
+               double div = (double)obj.a/obj.b;
+               double perc = div*100;
+               System.out.println("Percentage result is " + perc);
+               break;
+            }
+            case 6:
+            {
+                System.exit(0);
+                break;
+            }
+            default:
+            {
+                System.out.println("Enter the valid options in menu from 1 to 6");
+                obj.Input();
+            }
+        }
+        obj.Input();
+    }
+    public static void main(String[] args) {
+         Ex7 ob1 = new Ex7();
+         ob1.Input();
+        
+    }
+    
+}
+
+ques 8:
+
+
+package ex8;
+import java.util.*;
+
+public class Ex8 {
+
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name[] = new String[5];
+        int sal[] = new int[5];
+        int max = sal[0];
+        int min = sal[0];
+        int maxim = 0;
+        int minim = 0;
+        int avg = 0;
+        double average = 0;
+        for(int i =0; i<5; i++)
+        {
+            System.out.println("Enter the name of the employee");
+            name[i]= sc.next();
+            System.out.println("Enter the salary of that employee");
+            sal[i] = sc.nextInt();
+            avg = avg + sal[i];
+            if(max < sal[i])
+            {
+                max = sal[i];
+                maxim = i;
+            }
+            if(min > sal[i])
+            {
+                min = sal[i];
+                minim = i;
+            }
+        }
+        average = (double)avg/5;
+        System.out.println("Highly paid Employee is " + name[maxim] + " with salary " + sal[maxim]);
+        System.out.println("Lowly paid Employee is " + name[minim] + " with salary " + sal[minim]);
+        System.out.println("The average salary of employee is " + average);
+    }
+    
+}
+
+ques 9:
+
+
+package ex9;
+
+import java.util.*;
+public class Ex9 {
+
+    
+    public static void main(String[] args) {
+        int col;
+        int row;
+        int matrix[][] = new int[3][3];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column");
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+ques 10:
+
+
+package ex10;
+
+import java.util.Scanner;
+
+
+public class Ex10 {
+
+    
+    public static void main(String[] args) {
+        int col;
+        int row;
+        int matrix[][] = new int[3][3];
+        int matrix1[][] = new int[3][3];
+        int matrix2[][] = new int[3][3];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column");
+                matrix[i][j] = sc.nextInt();
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column for the second matrix");
+                matrix1[i][j] = sc.nextInt();
+                matrix2[i][j] = matrix[i][j] + matrix1[i][j];
+                //System.out.println(matrix2[i][j]);
+            }
+        }
+        System.out.println("1st matrix");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("2nd matrix");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix1[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("added matrix is");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix2[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+ques 11:
+
+
+package ex11;
+
+import java.util.Scanner;
+
+
+public class Ex11 {
+
+    public static void main(String[] args) {
+        int col = 0;
+        int row;
+        int matrix[][] = new int[3][3];
+        int matrix1[][] = new int[3][3];
+        int matrix2[][] = new int[3][3];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column");
+                matrix[i][j] = sc.nextInt();
+                System.out.println("Enter the number in the " + i + "th row" + j+ "th column for the second matrix");
+                matrix1[i][j] = sc.nextInt();
+                
+            }
+        }
+        for(int i = 0; i<3; i++)
+        {
+            for(int j =0; j<3; j++)
+            {
+               for(int k =0; k<3; k++)
+               {
+                   col += (matrix[i][k] * matrix1[k][j]);
+               }
+                matrix2[i][j] = col;
+                col =0;
+            }
+            
+        }
+        System.out.println("1st matrix");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("2nd matrix");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix1[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("multiplied matrix is");
+        System.out.println();
+        for(int i = 0; i<3; i++)
+        {
+            for(int j = 0; j<3; j++)
+            {
+                System.out.print("\t" + matrix2[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+ques 12:
+
+package arraylistex;
+
+import java.util.*;
+public class ArrayListEx {
+
+   
+
+
+
+
+
+    
+    public static void main(String[] args) {
+        List<Employee> set = new ArrayList<Employee>();
+        List<Employe> list = new ArrayList<Employe>();
+        Employee e1 = new Employee("Krish", 1, 27, 50000);
+        Employee e2 = new Employee("Thayu", 2, 24, 60000);
+        Employee e3 = new Employee("Raja", 3, 26, 70000);
+        Employee e4 = new Employee("Ram", 7, 25, 80000);
+        Employee e5 = new Employee("Ravi", 5, 23, 90000);
+        Employee e6 = new Employee("Ramesh", 6, 22, 100000);
+        Employee e7 = new Employee("Aravind", 4, 21, 1000000);
+        Employe ee1 = new Employe("Krish", 1, 27, 50000);
+        Employe ee2 = new Employe("Thayu", 2, 24, 60000);
+        Employe ee3 = new Employe("Raja", 3, 26, 70000);
+        Employe ee4 = new Employe("Ram", 7, 25, 80000);
+        Employe ee5 = new Employe("Ravi", 5, 23, 90000);
+        Employe ee6 = new Employe("Ramesh", 6, 22, 100000);
+        Employe ee7 = new Employe("Aravind", 4, 21, 1000000);
+        set.add(e1);
+        set.add(e2);
+        set.add(e3);
+        set.add(e4);
+        set.add(e5);
+        set.add(e6);
+        set.add(e7);
+        list.add(ee1);
+        list.add(ee2);
+        list.add(ee3);
+        list.add(ee4);
+        list.add(ee5);
+        list.add(ee6);
+        list.add(ee7);
+        Collections.sort(set);
+        for(Employee e: set)
+        {
+            System.out.println(e.id + " " + e.name + " " + e.age + " " + e.sal);
+        }
+        System.out.println("Name of the employee with max salary is");
+        Employee ee = Collections.max(set, new comSalary());
+        System.out.println(ee.name + "with salary " + ee.sal);
+        //Employee eee = new Employee(set, new comSalary());
+        System.out.println("sorting based on salary");
+        Collections.sort(list);
+        for(Employe e: list)
+        {
+            System.out.println(e.id + " " + e.name + " " + e.age + " " + e.sal);
+        }
+    }
+    
+    
+    
+}
+class Employee implements Comparable<Employee>
+{
+    int id, age, sal;
+    String name;
+    public Employee(String name,int id, int age, int sal)
+    {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+        this.sal = sal;
+    }
+    public int compareTo(Employee e)
+    {
+        int compareid = ((Employee)e).id;
+        return this.id-compareid;
+    }
+}
+class comSalary implements Comparator<Employee>
+{
+    public int compare(Employee a, Employee b)
+    {
+        if(a.sal < b.sal)
+            return -1;
+        else if(a.sal == b.sal)
+            return 0;
+        else
+            return 1;
+    }
+}
+class Employe implements Comparable<Employe>
+{
+    int id, age, sal;
+    String name;
+    public Employe(String name,int id, int age, int sal)
+    {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+        this.sal = sal;
+    }
+    public int compareTo(Employe e)
+    {
+        int compareid = ((Employe)e).sal;
+        return compareid - this.sal;
+    }
+}
+
+ques 13:
+
+
+package duplicateex;
+
+import java.util.*;
+class Employee
+{
+    int id, age, sal;
+    String name;
+    public Employee(int id, int age, String name, int sal)
+    {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.sal = sal;
+    }
+}
+public class DuplicateEx extends java.util.HashMap<Integer, Employee> {
+
+    public Employee put(Integer key, Employee value)
+    {
+        if(containsKey(key))
+        {
+            return value;
+        }
+        else
+        {
+            return super.put(key, value);
+        }
+    }
+   
+    public static void main(String[] args) {
+        HashMap<Integer, Employee> hm = new HashMap<>();
+        Employee e1 = new Employee(1, 23, "Krishna", 50000);
+        Employee e2 = new Employee(2, 24, "Thayu", 90000);
+        Employee e3 = new Employee(3, 25, "Raja", 80000);
+        Employee e4 = new Employee(4, 26, "Krish", 60000);
+        
+        hm.put(1,e1);
+        hm.put(2,e2);
+        hm.put(3, e3);
+        hm.put(4, e4);
+        hm.put(1, e1);
+        for(Map.Entry<Integer, Employee> entry: hm.entrySet())
+        {
+            int key = entry.getKey();
+            Employee e = entry.getValue();
+            System.out.println(key + " Details : ");
+            System.out.println(e.id + " " + e.age + " " + e.name + " " + e.sal);
+        }
+        hm.remove(2);
+        System.out.println("After removing");
+        for(Map.Entry<Integer, Employee> entry: hm.entrySet())
+        {
+            int key = entry.getKey();
+            Employee e = entry.getValue();
+            System.out.println(key + " Details : ");
+            System.out.println(e.id + " " + e.age + " " + e.name + " " + e.sal);
+        }
+        e2 = null;
+        Employee e5 = new Employee(2, 27, "Thayu", 90000);
+        hm.put(2, e5);
+        System.out.println("Value after update");
+        for(Map.Entry<Integer, Employee> entry: hm.entrySet())
+        {
+            int key = entry.getKey();
+            Employee e = entry.getValue();
+            System.out.println(key + " Details : ");
+            System.out.println(e.id + " " + e.age + " " + e.name + " " + e.sal);
+        }
+    }
+    
+}
+
+ques 14:
+
+
+package genericex;
+import java.util.*;
+
+
+public class GenericEx {
+
+    
+    public static void main(String[] args) {
+        
+        int n =0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enetr the number of details you like to enter in numbers");
+        n= sc.nextInt();
+        int age[] = new int[n];
+        int sal[] = new int[n];
+        
+        for(int i = 0; i<n; i++)
+        {
+            int x = i + 1;
+            System.out.println("Eneter the age of employee " + x);
+            age[i] = sc.nextInt();
+            System.out.println("Eneter the salary of employee " + x);
+            sal[i] = sc.nextInt();
+            
+        }
+        
+        for(int i = 0; i<n; i++)
+        {
+          EmpDet<Integer, Integer> ed = new EmpDet<Integer, Integer>(age[i], sal[i]);
+          int t = i + 1;
+          System.out.println("detail of the employee " + t  + " : ") ;
+          ed.printDet(age[i], sal[i]);    
+        }
+        
+    }
+    
+}
+class EmpDet<A, S>
+{
+    A a;
+    S s;
+    public EmpDet(A a, S s)
+    {
+        this.a = a;
+        this.s = s;
+    }
+    void printDet(int age, int sal)
+    {
+        System.out.println("The age is " + a);
+        System.out.println("The Salary is " + s);
+    }
+}
+
+ques 15:
+
+
+package hashmapex;
+
+import java.util.*;
+class Employee
+{
+    int id, age, sal;
+    String name;
+    public Employee(int id, int age, String name, int sal)
+    {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.sal = sal;
+    }
+}
+public class HashMapEx {
+
+   
+    public static void main(String[] args) {
+        HashMap<Integer, Employee> hm = new HashMap<>();
+        Employee e1 = new Employee(1, 23, "Krishna", 50000);
+        Employee e2 = new Employee(2, 24, "Thayu", 90000);
+        Employee e3 = new Employee(3, 25, "Raja", 80000);
+        Employee e4 = new Employee(4, 26, "Krish", 60000);
+        hm.put(1,e1);
+        hm.put(2,e2);
+        hm.put(3, e3);
+        hm.put(4, e4);
+        for(Map.Entry<Integer, Employee> entry: hm.entrySet())
+        {
+            int key = entry.getKey();
+            Employee e = entry.getValue();
+            System.out.println(key + " Details : ");
+            System.out.println(e.id + " " + e.age + " " + e.name + " " + e.sal);
+        }
+        hm.remove(2);
+        System.out.println("After removing");
+        for(Map.Entry<Integer, Employee> entry: hm.entrySet())
+        {
+            int key = entry.getKey();
+            Employee e = entry.getValue();
+            System.out.println(key + " Details : ");
+            System.out.println(e.id + " " + e.age + " " + e.name + " " + e.sal);
+        }
+        e2 = null;
+        Employee e5 = new Employee(2, 27, "Thayu", 90000);
+        hm.put(2, e5);
+        System.out.println("Value after update");
+        for(Map.Entry<Integer, Employee> entry: hm.entrySet())
+        {
+            int key = entry.getKey();
+            Employee e = entry.getValue();
+            System.out.println(key + " Details : ");
+            System.out.println(e.id + " " + e.age + " " + e.name + " " + e.sal);
+        }
+    }
+    
+}
+
+ques 16:
+
+
+package treesetex;
+import java.util.*;
+
+public class TreeSetEx {
+
+    
+    public static void main(String[] args) {
+        Set<Employee> set = new TreeSet<Employee>();
+        Employee e1 = new Employee("Krish", 1, 27);
+        Employee e2 = new Employee("Thayu", 2, 24);
+        Employee e3 = new Employee("Raja", 3, 26);
+        Employee e4 = new Employee("Ram", 7, 25);
+        Employee e5 = new Employee("Ravi", 5, 23);
+        Employee e6 = new Employee("Ramesh", 6, 22);
+        Employee e7 = new Employee("Aravind", 4, 21);
+        set.add(e1);
+        set.add(e2);
+        set.add(e3);
+        set.add(e4);
+        set.add(e5);
+        set.add(e6);
+        set.add(e7);
+        for(Employee e: set)
+        {
+            System.out.println(e.id + " " + e.name + " " + e.age);
+        }
+    }
+    
+    
+}
+class Employee implements Comparable<Employee>
+{
+    int id, age;
+    String name;
+    public Employee(String name,int id, int age)
+    {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
+    public int compareTo(Employee e)
+    {
+        if(id > e.id)
+        {
+            return 1;
+        }
+        else if(id < e.id)
+        {
+            return -1;
+        }
+        else
+            return 0;
+    }
+}
+
+ques 17:
+
+package ex17;
+import java.util.*;
+
+public class Ex17 {
+
+   
+    public static void main(String[] args) {
+        System.out.println("Details of students in maths department");
+        maths obj = new maths();
+        
+       obj.display();
+       System.out.println("Details of students in biology department");
+        Biology obj1 = new Biology();
+        obj1.display();
+        System.out.println("Details of students in computer department");
+        Computer obj2 = new Computer();
+        obj2.display();
+        System.out.println("Details of students in electronics department");
+        Electronics obj3 = new Electronics();
+        obj3.display();
+        System.out.println("Details of students in software department");
+        Software obj4 = new Software();
+        System.out.println("Details of students in hardware department");
+        Hardware obj5 = new Hardware();
+        System.out.println("Details of students in botony department");
+        Botony obj6 = new Botony();
+        System.out.println("Details of students in zoology department");
+        Zoology obj7 = new Zoology();
+    }
+    
+}
+class Science
+{
+    int numb;
+    String name[];
+    int age[];
+    void studentDet()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Number of students enroled");
+        numb = sc.nextInt();
+        name = new String[numb];
+        age = new int[numb];
+        for(int i =0; i< numb; i++)
+        {
+        System.out.println("Enter the name of the student");
+        name[i] = sc.next();
+        System.out.println("Enter the age of the student");
+        age[i] = sc.nextInt();
+        
+        }
+    }
+}
+class maths extends Science
+{
+    int marks[];
+    
+    maths()
+    {
+        
+        
+        super.studentDet();
+        
+       
+        
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in maths by " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+}
+class Biology extends Science
+{
+    int marks[];
+    Biology()
+    {
+        super.studentDet();
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in Biology by " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+    
+}
+class Computer extends Science
+{
+    int marks[];
+    Computer()
+    {
+        super.studentDet();
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in computer " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+}
+class Electronics extends Science
+{
+    int marks[];
+    Electronics()
+    {
+        super.studentDet();
+        marks = new int[numb];
+        Scanner sc = new Scanner(System.in);
+        for(int i =0; i< numb; i++)
+        {
+    System.out.println(" enter marks in electronics by " + name[i]);
+    marks[i] = sc.nextInt();
+        }
+    }
+    void display()
+    {
+        for(int i = 0; i<numb; i++)
+        {
+            
+        System.out.println("name of the student "  + name[i]);
+        System.out.println("age of the student "+age[i]);
+        System.out.println(" marks of student " + name[i] + " is " + marks[i]);
+        }
+        
+    }
+}
+class Software extends Computer
+{
+    
+    Software()
+    {
+        
+        
+        super.display();
+    }
+   
+}
+class Hardware extends Computer
+{
+    
+    Hardware()
+    {
+        
+        
+        super.display();
+    }
+}
+class Botony extends Biology
+{
+    
+    Botony()
+    {
+        
+        
+        super.display();
+    }
+}
+class Zoology extends Biology
+{
+    
+    Zoology()
+    {
+        
+        
+        super.display();
+    }
+}
